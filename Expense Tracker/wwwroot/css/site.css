@@ -67,7 +67,10 @@ body {
   padding: 0px 10px;
 }
 
-
+.e-breadcrumb a, .e-breadcrumb a:hover {
+  text-decoration: none !important;
+  color: inherit !important;
+}
 
 
 .e-btn-group.custom-rbt-group{
