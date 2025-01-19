@@ -62,7 +62,9 @@ body {
   border: none;
   background-color: #1a222b;
 }
-
+.main-content{
+  margin-left: 290px;
+}
 .e-grid .e-content table {
   padding: 0px 10px;
 }
@@ -89,6 +91,11 @@ width: 50%;
   background-color: #fff;
   color: #212b36;
   border: 1px solid #fff;
+}
+#sidebar{
+  background-color: #12161d;
+  border-right: 1px dashed rgba(75,82,85,0.24);
+  padding: 10px 20px;
 }
 .widget{
   border-radius: 1rem;

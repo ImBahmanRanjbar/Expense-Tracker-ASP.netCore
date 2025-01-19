@@ -6,7 +6,9 @@ namespace Expense_Tracker.Models;
 public class Category
 {
     [Key] public int CategoryId { get; set; }
-    [Column(TypeName = "nvarchar(50)")] public string Title { get; set; }
+    [Column(TypeName = "nvarchar(50)")]
+    [Required(ErrorMessage = "Title is required")]
+    public string Title { get; set; }
     [Column(TypeName = "nvarchar(5)")] 
     [Required(ErrorMessage = "The field is required(press Win + . )")]
     public string Icon { get; set; } = "✈️";

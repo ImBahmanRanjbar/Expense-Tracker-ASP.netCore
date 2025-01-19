@@ -22,10 +22,18 @@ public class TransactionController : Controller
     }
 
 
-    public IActionResult AddOrEdit()
-    {
-        PopulateCategories();
-        return View(new Transaction());
+    public IActionResult AddOrEdit(int id=0)
+    {   PopulateCategories();
+        if (id==0)
+        {
+            return View(new Transaction());
+        }
+        else
+        {
+            return View(_context.Transactions.Find(id));
+        }
+     
+      
     }
 
 
@@ -35,12 +43,19 @@ public class TransactionController : Controller
     {
         if (ModelState.IsValid)
         {
-            _context.Add(transaction);
+            if (transaction.TransactionId==0)
+            {
+                _context.Add(transaction);
+            }
+            else
+            {
+                _context.Update(transaction);
+            }
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        ViewData["CategoryId"] = new SelectList(_context.Categories, "CategoryId", "Icon", transaction.CategoryId);
+        PopulateCategories();
         return View(transaction);
     }
 

@@ -39,7 +39,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     "default",
-    "{controller=category}/{action=Index}/{id?}");
+    "{controller=Dashboard}/{action=Index}/{id?}");
 app.MapRazorPages();
 
 app.Run();
