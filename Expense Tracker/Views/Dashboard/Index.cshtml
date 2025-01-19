@@ -1,4 +1,5 @@
-﻿@*
+﻿@using Syncfusion.EJ2.Charts
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
@@ -56,8 +57,8 @@
                 <e-accumulation-series-collection>
                     <e-accumulation-series dataSource="@ViewBag.DoughnutChartData"
                                            xName="categoryTitleWithIcon" yName="amount"
-                                           innerRadius="60%" legendShape="Circle" 
-                                           palettes=@(new string[]{"#0e8d76","#a4b219","#cb9b00","#8a442c","#0454b5","#7d0a0a","#822690","#4c2090","#313e93","#0096ac"})>
+                                           innerRadius="60%" legendShape="Circle"
+                                           palettes=@(new[] {"#0e8d76", "#a4b219", "#cb9b00", "#8a442c", "#0454b5", "#7d0a0a", "#822690", "#4c2090", "#313e93", "#0096ac"})>
                         <e-accumulationseries-datalabel name="formattedAmount" visible></e-accumulationseries-datalabel>
                     </e-accumulation-series>
                 </e-accumulation-series-collection>
@@ -74,7 +75,7 @@
                 <h5 class="fw-bold">Income vs Expense</h5>
             </div>
             <ejs-chart id="spline-chart" background="#1a222b"
-                       palettes=@(new string[]{"#54ffa9","#ffe91a"})>
+                       palettes=@(new[] {"#54ffa9", "#ffe91a"})>
                 <e-chart-primaryxaxis valueType="Category">
                     <e-majorgridlines width="0"></e-majorgridlines>
                     <e-majorticklines width="0"></e-majorticklines>
@@ -89,9 +90,11 @@
                 </e-chart-chartarea>
                 <e-series-collection>
                     <e-series dataSource="@ViewBag.SplineChartData" xName="day" width="3"
-                              yName="income" name="Income" type="@Syncfusion.EJ2.Charts.ChartSeriesType.Spline"></e-series>
+                              yName="income" name="Income" type="@ChartSeriesType.Spline">
+                    </e-series>
                     <e-series dataSource="@ViewBag.SplineChartData" xName="day" width="3"
-                              yName="expense" name="Expense" type="@Syncfusion.EJ2.Charts.ChartSeriesType.Spline"></e-series>
+                              yName="expense" name="Expense" type="@ChartSeriesType.Spline">
+                    </e-series>
                 </e-series-collection>
                 <e-chart-legendsettings position="Top" alignment="Far" toggleVisibility="false">
                     <e-legendsettings-textstyle color="#fff" size="1rem"></e-legendsettings-textstyle>
@@ -111,7 +114,7 @@
             </div>
             <div class="px-4 pb-4">
                 <ejs-grid id="recent-transactions"
-                dataSource="@ViewBag.RecentTransactions" gridLines="None">
+                          dataSource="@ViewBag.RecentTransactions" gridLines="None">
                     <e-grid-columns>
                         <e-grid-column headerText="Category" field="CategoryTitleWithIcon"></e-grid-column>
                         <e-grid-column headerText="Date" field="Date" type="date" format="MMM-dd-yy"></e-grid-column>

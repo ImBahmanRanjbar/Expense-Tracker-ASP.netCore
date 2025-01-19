@@ -15,7 +15,7 @@
 </head>
 <body class="e-bigger">
 
-<partial name="_SideBar" />
+<partial name="_SideBar"/>
 
 <div class="dock-target">
 
@@ -25,7 +25,7 @@
             <div>
                 <i class="fa-solid fa-bell"></i>
                 <i class="fa-solid fa-message"></i>
-                <img class="profile-pic" src="profile.jpg" />
+                <img class="profile-pic" src="profile.jpg"/>
             </div>
         </div>
     </nav>
@@ -34,7 +34,7 @@
     <div class="main-content">
         <div class="container mt-5">
             <div class="row justify-content-center">
-                <div class="@(ViewData["isDashboard"] == null?"col-md-10":"col-md-12")">
+                <div class="@(ViewData["isDashboard"] == null ? "col-md-10" : "col-md-12")">
                     <main role="main" class="pb-3">
                         @if (ViewData["isDashboard"] == null)
                         {
@@ -55,7 +55,8 @@
                                             </div>
                                         </div>
                                         <ejs-breadcrumb id="breadcrumb"
-                                                        separatorTemplate="@Html.Raw("<span class='fa-solid fa-angle-right'></span>")"></ejs-breadcrumb>
+                                                        separatorTemplate="@Html.Raw("<span class='fa-solid fa-angle-right'></span>")">
+                                        </ejs-breadcrumb>
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +73,7 @@
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
-@await RenderSectionAsync("Scripts", required: false)
+@await RenderSectionAsync("Scripts", false)
 <ejs-scripts></ejs-scripts>
 </body>
 </html>

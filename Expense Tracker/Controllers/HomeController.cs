@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
 using Expense_Tracker.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Expense_Tracker.Controllers;
 
@@ -12,7 +12,6 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
-
 
 
     public IActionResult Privacy()

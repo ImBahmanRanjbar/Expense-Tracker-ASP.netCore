@@ -1,6 +1,5 @@
 using Expense_Tracker.Models;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 namespace Expense_Tracker.Controllers;
@@ -22,35 +21,26 @@ public class TransactionController : Controller
     }
 
 
-    public IActionResult AddOrEdit(int id=0)
-    {   PopulateCategories();
-        if (id==0)
-        {
+    public IActionResult AddOrEdit(int id = 0)
+    {
+        PopulateCategories();
+        if (id == 0)
             return View(new Transaction());
-        }
-        else
-        {
-            return View(_context.Transactions.Find(id));
-        }
-     
-      
+        return View(_context.Transactions.Find(id));
     }
 
 
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> AddOrEdit([Bind("TransactionId,CategoryId,Amount,Note,Date")] Transaction transaction)
+    public async Task<IActionResult> AddOrEdit(
+        [Bind("TransactionId,CategoryId,Amount,Note,Date")] Transaction transaction)
     {
         if (ModelState.IsValid)
         {
-            if (transaction.TransactionId==0)
-            {
+            if (transaction.TransactionId == 0)
                 _context.Add(transaction);
-            }
             else
-            {
                 _context.Update(transaction);
-            }
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
@@ -78,11 +68,11 @@ public class TransactionController : Controller
     public void PopulateCategories()
     {
         var CategoryCollection = _context.Categories.ToList();
-        Category defaultCategory = new Category()
+        var defaultCategory = new Category
         {
             CategoryId = 0, Title = "Choose a Category"
         };
-            CategoryCollection.Insert(0,defaultCategory);
-            ViewBag.Categories = CategoryCollection;
+        CategoryCollection.Insert(0, defaultCategory);
+        ViewBag.Categories = CategoryCollection;
     }
 }
