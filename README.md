@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>Expense Tracker README</title>
-</head>
 <body>
 <h1>Expense Tracker</h1>
 <p><strong>Expense Tracker</strong> is a simple yet powerful application that helps you track and manage your income and expenses effectively. Managing your finances is crucial to ensure you can save for the future, stay within your budget, and avoid unnecessary financial stress. This app allows you to categorize your spending and income, track your cash flow, and gain insights into your financial habits.</p>
@@ -23,7 +20,8 @@
 </ul>
 <h2>How to Use</h2>
 <ol>
-    <li></li><pre><code>this site: https://bahmanranjbar.bsite.net</code></pre></ol>
+    <li><pre><code>this site: https://bahmanranjbar.bsite.net</code></pre></ol>
+    <strong>Or</strong>
     <li><strong>Install</strong>:
         <ul>
             <li>First, clone the project:</li>
