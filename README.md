@@ -20,7 +20,7 @@
 </ul>
 <h2>How to Use</h2>
 <ol>
-    <li><pre><code>this site: https://bahmanranjbar.bsite.net</code></pre></ol>
+    <li><pre><code>this site: <i>http://expensebahman.somee.com</i></code></pre></ol>
     <strong>Or</strong>
     <li><strong>Install</strong>:
         <ul>
@@ -41,7 +41,7 @@
     </li>
 </ol>
 <ul>
-    <li><strong>Backend</strong>:ASP>NETCORE</li>
+    <li><strong>Backend</strong>:ASP.NETCORE</li>
     <li><strong>Database</strong>: SqlServer (if applicable)</li>
 </ul>
 <h2>Contributing</h2>
