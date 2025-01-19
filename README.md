@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Expense Tracker README</title>
 </head>
 <body>
@@ -25,6 +23,7 @@
 </ul>
 <h2>How to Use</h2>
 <ol>
+    <li></li><pre><code>this site: https://bahmanranjbar.bsite.net</code></pre></ol>
     <li><strong>Install</strong>:
         <ul>
             <li>First, clone the project:</li>
@@ -43,13 +42,9 @@
         </ul>
     </li>
 </ol>
-<h2>API Usage (Optional)</h2>
-<p>If your project uses an API for managing transactions or categories, you can configure and connect them under the settings section.</p>
-<h2>Technologies Used</h2>
 <ul>
-    <li><strong>Frontend</strong>: React.js, Bootstrap</li>
-    <li><strong>Backend</strong>: Node.js, Express</li>
-    <li><strong>Database</strong>: MongoDB (if applicable)</li>
+    <li><strong>Backend</strong>:ASP>NETCORE</li>
+    <li><strong>Database</strong>: SqlServer (if applicable)</li>
 </ul>
 <h2>Contributing</h2>
 <p>To contribute to the project, feel free to fork the repository and submit a pull request.</p>
