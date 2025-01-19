@@ -46,5 +46,7 @@
 </ul>
 <h2>Contributing</h2>
 <p>To contribute to the project, feel free to fork the repository and submit a pull request.</p>
+    <h2>View</h2>
+    <p></p>
 </body>
 </html>
