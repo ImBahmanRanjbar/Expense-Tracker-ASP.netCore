@@ -46,7 +46,8 @@
 </ul>
 <h2>Contributing</h2>
 <p>To contribute to the project, feel free to fork the repository and submit a pull request.</p>
-    <h2>View ;This Gif may take some time to load</h2>
+    <h2>View :This Gif may take some time to load</h2>
+    <p>![Expense](https://github.com/user-attachments/assets/05c23ad9-d612-4dcb-b1a1-d7558aee59b8)</p>
 </body>
 </html>
 
